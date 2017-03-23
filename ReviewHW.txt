@@ -17,3 +17,9 @@ GIT HUB란 Repository를 GIT HUB 서버에 놓고, 접근 가능하게 하는 �
 
 PULL / PUSH : MERGE 개념인데, MERGE 되는 것이 삭제되지는 않는 느낌.
 PATCH : 원격에 있는 Repository PULL / PUSH 하기 전에, 간을 보는 느낌.
+
+
+SOURCE TREE 사용법
+
+SOURCE TREE는 GIT을 시각적으로 이해하기 쉽게 보여주는 TOOL 이다.
+간단한 BUTTON 으로 GIT 작동을 시킬 수 있다.
