@@ -1,3 +1,6 @@
+HW #2 - SANDWICH STUDY GROUP “HANYEOREUM BAE”
+
+
 GIT 사용법
 
 GIT은 버젼 관리 소프트웨어로, Repository 바탕으로 흘러간다.
