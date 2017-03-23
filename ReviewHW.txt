@@ -8,3 +8,12 @@ BRANCH (repository에 속해 있는 repository) 두 개를 더 최신 버젼인 
 터미널에서 사용할 경우, 다양한 명령어가 있다.
 예) git add filename, git add -A : STAGE 명령어
 
+
+GIT HUB 사용법
+
+GIT HUB란 Repository를 GIT HUB 서버에 놓고, 접근 가능하게 하는 것.
+서버에 있는 Repository를 Local로 포크해와서 수정 후, Repository 들을 Merge 하는 방법으로 수정 가능.
+>> 자기 GIT HUB에 있는 것이 아니더라도, URL만 안다면 (이후 허가 받는다면) 다른 사람 GIT HUB에도 접근 가능.
+
+PULL / PUSH : MERGE 개념인데, MERGE 되는 것이 삭제되지는 않는 느낌.
+PATCH : 원격에 있는 Repository PULL / PUSH 하기 전에, 간을 보는 느낌.
