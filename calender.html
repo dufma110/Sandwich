@@ -1,0 +1,72 @@
+<script>
+
+function output (y, m)
+{
+    // 1년 1월 1일은 월요일
+    cnt=1;
+    var monthcnt;
+    if (y==1){
+        // 1년은 cnt 추가 없이 그냥 넘어감
+    }
+    else{
+        for(i=1; i<=y-1; i++)
+        {
+            cnt+=1; // 기본적으로 365일 >> 365%7=1, cnt에 1추가
+            if(i%4==0){
+                cnt+=1; // 4년마다 윤년
+                if(i%100==0){
+                    cnt-=1; // 4의 배수지만 100의 배수면 윤년 아님
+                    if(i%400==0){
+                        cnt+=1; // 그러면서 400의 배수면 또 다시 윤년
+                    }
+                }
+            }
+        }
+    }
+    if (m==1){
+        // 1월은 cnt 추가 없이 그냥 넘어감
+        monthcnt=31;
+    }
+    else{
+     for(j=1; j<=m-1; j++){
+         if(j==2){
+             if(((y%4==0)&&(y%100!=0))||(y%400==0)){
+                 cnt+=1; // 윤년 2월은 29일
+                 monthcnt=29;
+                 }
+                 else{
+            // 2월은 기본적으로 28일
+            monthcnt=28;
+            }
+         }
+         else if((j==1)||(j==3)||(j==5)||(j==7)||(j==8)||(j==10)||(j==12)){
+             cnt+=3; // 31일 인 달, 12는 필요없지만 의미상 추가
+             monthcnt=31;
+         }
+         else{
+             cnt+=2; // 30일 인 달
+             monthcnt=30;
+         }
+         }
+    } // 시작 요일 정해짐
+    var blankcnt = cnt%7;
+    alert("일 월 화 수 목 금 토 ");
+
+    for(k=1; k<=blankcnt+monthcnt; k++)
+    {
+        if(k<=blankcnt){
+            alert("  ");
+        }
+        else{
+            alert(k-blankcnt);
+        }
+
+        if(k%7==0){
+            alert("/n");
+        }
+    }
+}
+
+output(2017,3);
+
+    </script>
