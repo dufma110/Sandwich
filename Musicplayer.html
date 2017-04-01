@@ -1,0 +1,83 @@
+<script>
+    function basicDisplay (){ // Music Player 기본 화면
+        this.showMenu = function() { // 기본 화면 출력
+            document.write(" 1. All Musics <br>"); // 모든 노래
+            document.write(" 2. Favorite Musics <br>"); // 좋아하는 노래 모음
+            document.write(" 3. With a Wine <br>");
+            document.write(" 4. Chill <br>");
+            document.write(" 5. Flying <br>");
+        }
+        this.showMenu();
+
+        var i = prompt("Select Menu"); // Menu 입력
+        
+        this.allMusic = function () { // All Music 재생목록 선택 시
+            this.showDisplay = function() {
+                document.write(" All Music <br><br>"); // 재생목록 제목 출력 후
+                documnet.write(" 1. Bang Bang Bang <br>"); // 노래 목록 출력 (1~5)
+                document.write(" 2. Last Dance <br>");
+                document.write(" 3. Haruharu <br>");
+                document.write(" 4. D")
+                document.write(" 5. Russian Rullet <br><br>");
+                document.write(" 6. Add Music <br>"); // 재생목록에 노래 추가 (All Music 이므로 실제로는 필요 없음)
+                document.write(" 7. Delete Music <br>"); // 재생목록에서 노래 삭제 (All Music 에서 삭제 >> 전체 노래에서 삭제)
+                document.write(" 8. Bace to Main <br>"); // 이전 메뉴로 돌아가기
+            }
+            this.showDisplay();
+
+            var j = prompt("Select Menu"); // 재생목록 내 Menu 입력
+
+            this.bangBangBang = function(){ // Bang Bang Bang 선택 시
+                this.showInformation = function(){
+                    document.write(" Title : Bang Bang Bang <br><br>");
+                    document.write(" Singer : Bigbang <br>");
+                    document.write(" Lyric by G-Drangon <br>");
+                    document.write(" Produced by Teddy <br>");
+                    document.write(" Length : 3.30 <br>");
+                    document.write(" Album Name : ALIVE <br><br>");
+                    document.write(" 1. Show me Album Image<br>"); // 앨범 이미지 보기
+                    document.write(" 2. Show me Lyrics <br>"); // 가사 보기
+                    document.write(" 3. Add to Music Player List<br>"); // 재생목록에 추가
+                    document.write(" 4. Delete from Music Player List<br>"); // 현재 재생목록에서 제거
+                    document.write(" 5. Delete Music <br>"); // 음악 제거
+                    document.write(" 6. Back to Music Player List <br>"); // 재생목록으로 돌아가기
+                }
+                this.showInformation();
+
+                var k = prompt("Select Menu");
+
+                switch (k){
+                case(1) : this.showAlbumImage();
+                case(2) : this.showLyrics();
+                case(3) : this.addToMusicPlayerList();
+                case(4) : this.deleteFromMusicPlayerList();
+                case(5) : this.deleteIt();
+                case(6) : backToPrevious(); // 이전 메뉴로 돌아가는 함수
+            }
+
+            }
+
+            switch (j){
+                case(1) : bangBangBang(); // 전체 노래 목록은 다른 곳에 저장, 현재 재생목록에서 제거 메뉴를 실행하려면 무슨 재생목록 하위 노래인지 알아야 하는데, this. 써야 하는지 고민
+                case(2) : lastDance();
+                case(3) : haraharu();
+                case(4) : d();
+                case(5) : russianRullet();
+                case(6) : this.addMusic();
+                case(7) : this.deleteMusic();
+                case(8) : backToPrevious();
+            }
+        }
+        switch(i){ // 입력 받은 키대로 메뉴 실행
+            case(1) : allMusic();
+            case(2) : favoriteMusic();
+            case(3) : withAWine();
+            case(4) : chill();
+            case(5) : flying();
+        }
+    }
+
+    basicDisplay();
+
+
+    </script>

@@ -1,0 +1,28 @@
+<script>
+    var me = {name:"BaeHanYeoReum", age:20, height:170, tell:function(){alert("Name is "+ this.name)}}
+
+function human(a,h,n) {
+this.age = a;
+this.height = h;
+this.name = n;
+this.tell = function(){
+    alert(this.age);
+}
+}
+
+var Jaehee = new human(20, 160, "Jaehee");
+var Hyungjoo = new human(20, 170, "Hyungjoo");
+var Unseong = new human(19, 190, "Unseong");
+
+//Hyungjoo.tell();
+
+function timetable(t) {
+    this.wed1 = this.multimedia;
+    this.wed2 = this.multimedia;
+    this.multimedia = {professor : "LEE", place : 222};
+    alert(this.t.professor);
+}
+
+timetable("wed1");
+
+    </script>
